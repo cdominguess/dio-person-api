@@ -8,8 +8,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/v1/people")
 public class PersonApiController {
 
-    @GetMapping("/")
+    /**
+     * Retorna a listagem de pessoas cadastradas
+     * @return
+     */
+    @GetMapping
     public String index() {
-        return "Recurso inicial da API. Para acessar os demais recursos, consulte a documentação.";
+        return "Recurso inicial da API.";
     }
+
+
 }
