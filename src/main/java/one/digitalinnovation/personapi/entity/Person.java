@@ -30,11 +30,11 @@ public class Person {
     @Column(nullable = false)
     private String firstName;
 
-    // Adicionando a propriedade "unique", o JPA irá inserir no banco um unique index para este campo
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String lastName;
 
-    @Column(nullable = false)
+    // Adicionando a propriedade "unique", o JPA irá inserir no banco um unique index para este campo
+    @Column(nullable = false, unique = true)
     private String cpf;
 
     @Column(nullable = false)
