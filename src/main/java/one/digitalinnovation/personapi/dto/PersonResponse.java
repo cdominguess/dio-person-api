@@ -6,10 +6,20 @@ import one.digitalinnovation.personapi.entity.Person;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
+import java.util.List;
+
+/**
+ * Classe criada para retornar objetos de pessoas ou listas,
+ * e seus respectivos status conforme recurso que está fazendo uso esta classe
+ */
 @Data
 @Builder
 public class PersonResponse {
-    public ResponseEntity<Person> displayPerson(Person objPerson) {
+    public ResponseEntity displayPerson(PersonRequest objPerson) {
         return new ResponseEntity<>(objPerson, HttpStatus.CREATED);
+    }
+
+    public ResponseEntity listPerson(List<PersonRequest> arrPeople) {
+        return new ResponseEntity<>(arrPeople, HttpStatus.OK);
     }
 }

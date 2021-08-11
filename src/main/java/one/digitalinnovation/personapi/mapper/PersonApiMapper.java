@@ -10,8 +10,9 @@ import org.mapstruct.factory.Mappers;
 public interface PersonApiMapper {
     PersonApiMapper INSTANCE = Mappers.getMapper(PersonApiMapper.class);
 
-    @Mapping(target = "birthDate", source = "birthDate", dateFormat = "dd-MM-yyyy")
+    @Mapping(target = "birthDate", source = "birthDate", dateFormat = "dd/MM/yyyy")
     Person toModel(PersonRequest personRequest);
 
+    @Mapping(target = "birthDate", source = "birthDate", dateFormat = "dd/MM/yyyy")
     PersonRequest toDTO(Person person);
 }
