@@ -15,11 +15,11 @@ import java.util.List;
 @Data
 @Builder
 public class PersonResponse {
-    public ResponseEntity displayPerson(PersonRequest objPerson) {
-        return new ResponseEntity<>(objPerson, HttpStatus.CREATED);
+    public ResponseEntity displayPerson(PersonRequest objPerson, HttpStatus httpStatus) {
+        return new ResponseEntity(objPerson, httpStatus);
     }
 
     public ResponseEntity listPerson(List<PersonRequest> arrPeople) {
-        return new ResponseEntity<>(arrPeople, HttpStatus.OK);
+        return new ResponseEntity(arrPeople, HttpStatus.OK);
     }
 }
